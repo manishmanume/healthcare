@@ -1,0 +1,104 @@
+.health_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.health_card_body {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.health_card_body img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.health_indicator {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.health_indicator:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  z-index: 10;
+}
+
+.combined_indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: #e6f2ff;
+  border-radius: 20px;
+  border: 1px solid #b3d1ff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  max-width: 160px;
+  text-align: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.indicator_icon {
+  font-size: 16px;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.indicator_label {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .healthcard_content {
+    padding: 1rem;
+  }
+
+  .health_card {
+    padding: 0.8rem 1rem;
+  }
+
+  .image_container {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.75rem;
+  }
+
+  .name_container h2 {
+    font-size: 1.1rem;
+  }
+
+  .date_time_row {
+    font-size: 0.8rem;
+  }
+
+  .progress_bar_container span {
+    font-size: 0.75rem;
+  }
+
+  .combined_indicator {
+    font-size: 11px;
+    gap: 6px;
+    padding: 5px 10px;
+    max-width: 120px;
+  }
+
+  .indicator_icon {
+    font-size: 14px;
+  }
+}

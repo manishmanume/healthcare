@@ -1,0 +1,103 @@
+.healthcard_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  max-width: 400px;
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+.health_card {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.health_card:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.card_row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.image_container {
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.name_container h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #222;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.date_time_row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.progress_bar_container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.progress_bar {
+  flex-grow: 1;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.6);
+}
+
+.progress {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+.progress.healthy {
+  background: #4CAF50;
+}
+
+.progress.warning {
+  background: #FFC107;
+}
+
+.progress_bar_container span {
+  font-size: 0.85rem;
+  color: #444;
+  min-width: 40px;
+  text-align: right;
+  font-weight: 600;
+}

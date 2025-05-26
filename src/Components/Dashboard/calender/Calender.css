@@ -1,0 +1,143 @@
+.calendar_wrapper {
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.calendar_container {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calendar_header {
+    background: #4a6fa5;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.calendar_header h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.calendar_days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #f0f4f8;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+.day_header {
+    text-align: center;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.calendar_grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: #e0e4e8;
+}
+
+.calendar_day {
+    background: white;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.date_number {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+    font-size: 0.9rem;
+}
+
+.appointments_container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.appointment_slot {
+    flex: 1 1 auto;
+}
+
+.appointment_time {
+    background: #1976d2;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+    border-left: 3px solid #0d47a1;
+    height: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.empty_slot {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashed_line {
+    width: 80%;
+    height: 1px;
+    background: repeating-linear-gradient(
+        to right,
+        #e0e0e0,
+        #e0e0e0 3px,
+        transparent 3px,
+        transparent 6px
+    );
+}
+
+.calendar_day:hover {
+    background: #f8f9fa;
+}
+
+.calendar_day:hover .date_number {
+    color: #4a6fa5;
+}
+
+@media (max-width: 768px) {
+    .calendar_wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .calendar_days,
+    .calendar_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .day_header {
+        font-size: 0.75rem;
+    }
+
+    .calendar_day {
+        padding: 0.4rem;
+    }
+
+    .calendar_header h2 {
+        font-size: 1.1rem;
+    }
+}
